@@ -1,10 +1,12 @@
 package com.example.aruoradbtest.config.datasource;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 import javax.sql.DataSource;
 import java.util.Map;
 
+@Slf4j
 public class DynamicDataSource extends AbstractRoutingDataSource {
 
     public DynamicDataSource(DataSource defaultDataSource, Map<Object, Object> targetDataSources){
@@ -15,6 +17,8 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
 
     @Override
     protected Object determineCurrentLookupKey() {
-        return DynamicDataSourceContextHolder.getDataSourceType();
+        String dataSourceType = DynamicDataSourceContextHolder.getDataSourceType();
+        log.info("For Current DataSource Type is {}",dataSourceType);
+        return dataSourceType;
     }
 }

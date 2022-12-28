@@ -1,5 +1,6 @@
 package com.example.aruoradbtest.service;
 
+import com.example.aruoradbtest.annotation.DataSource;
 import com.example.aruoradbtest.entity.Product;
 import com.example.aruoradbtest.entity.dto.ProductDto;
 import com.example.aruoradbtest.repository.ProductRepo;
@@ -13,6 +14,7 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@DataSource
 public class ProductServiceImpl implements ProductService{
 
     private final ProductRepo productRepo;
