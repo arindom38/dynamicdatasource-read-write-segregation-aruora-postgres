@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @ToString
 @Getter
 @Setter
+@Builder
 public class Product {
 
     @Id
