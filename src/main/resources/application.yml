@@ -11,7 +11,7 @@ spring:
       password: [ your_password ]
       driver-class-name: org.postgresql.Driver
       jdbc-url: jdbc:postgresql://your_writer_url:5432/productdb?serverTimezone=UTC&useUnicode=true@characterEncoding=utf-8
-      pattern: add*,update*
+      pattern: add*,update*,create*
   jpa:
     hibernate:
       ddl-auto: update
