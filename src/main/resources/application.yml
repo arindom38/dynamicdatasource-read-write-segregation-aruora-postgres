@@ -1,16 +1,16 @@
 spring:
   datasource:
     reader:
-      username: admin
+      username: [ Master_Username ]
       password: [ your_password ]
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://your_reader_url:3306/commentdb?serverTimezone=UTC&useUnicode=true@characterEncoding=utf-8
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://your_reader_url:5432/productdb?serverTimezone=UTC&useUnicode=true@characterEncoding=utf-8
       pattern: get*,find*
     writer:
-      username: admin
+      username: [ Master_Username ]
       password: [ your_password ]
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://your_writer_url:3306/commentdb?serverTimezone=UTC&useUnicode=true@characterEncoding=utf-8
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://your_writer_url:5432/productdb?serverTimezone=UTC&useUnicode=true@characterEncoding=utf-8
       pattern: add*,update*
   jpa:
     hibernate:
