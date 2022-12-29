@@ -9,6 +9,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
@@ -16,6 +17,7 @@ import java.util.regex.Pattern;
 
 @Aspect
 @Component
+@Primary
 @Slf4j
 public class DataSourceAspect {
     private final Pattern READ_PATTERN;

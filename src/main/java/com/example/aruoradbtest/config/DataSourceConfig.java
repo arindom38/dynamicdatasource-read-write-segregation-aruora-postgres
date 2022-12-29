@@ -23,7 +23,7 @@ public class DataSourceConfig {
 
     @Bean
     @ConfigurationProperties("spring.datasource.reader")
-    public DataSource salveDataSource() {
+    public DataSource slaveDataSource() {
         return DataSourceBuilder.create().build();
     }
 
